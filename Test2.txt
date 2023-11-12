@@ -1,1 +1,0 @@
-//(0.2) Check that the variables u and v are the same size.
