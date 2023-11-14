@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ps_Group11_Assignment
 
 ### 1. Project Introduction & Application
