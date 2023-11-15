@@ -10,7 +10,7 @@ on:
       - 'main'
 
 jobs:
-  buildAndTest:
+  build_and_test_on_macos_and_ubuntu:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -32,8 +32,15 @@ jobs:
       run: |
         cmake -S . -B build
         cmake --build build
-
-    - name: Run Test
+        
+    - name: Run Test for OS except Windows
+      if: runner.os != 'Windows'
       run: |
         cd build
-        ctest
+        ./GrayScottTests
+
+    - name: Run Test for Windows
+      if: runner.os == 'Windows'
+      run: |
+        cd build
+        GrayScottTests
