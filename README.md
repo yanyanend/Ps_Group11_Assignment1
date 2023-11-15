@@ -25,6 +25,19 @@
 
 This guide provides instructions on setting up a [Google Test](https://github.com/google/googletest) environment for C++ projects using [CMake](https://cmake.org/) on Linux.
 
+
+### 4. Test Program
+
+
+​	The test program is to prove that the main program is greatly complete the simulation and make sure the logic and data is correct, including three parts:
+
+(0.1) Check that the type of the model parameters (F , k) matches that of the element type of the u and v vectors.
+
+(0.2) Check that the variables u and v are the same size.
+
+(0.3) Check that the simulation produces the mathematically correct answer when u = 0 and v = 0.
+
+
 ## Overview
 
 We have chosen Google Test for testing in our project. Google Test is a popular C++ testing framework designed for a rich testing experience. It supports various types of assertions, test fixtures, and provides mechanisms for organizing and filtering test cases. Google Test simplifies writing test cases through macros, making test code easier to write and maintain.
@@ -98,13 +111,11 @@ gtest_discover_tests(GrayScottTests)
 
 ### Step 6: Build the Project
 
-Create a build directory, run CMake, and then use make to build the project:
+Use CMake to generate build system and the test executable:
 
 ```
-mkdir build
-cd build
-cmake ..
-make
+cmake -S . -B build
+cmake --build build
 ```
 
 ### Step 7: Run the Tests
@@ -112,20 +123,10 @@ make
 Execute your tests from the build directory:
 
 ```
-./my_test
+cd build
+./GrayScottTests
 ```
 
 ## Conclusion
 
 This README provides a comprehensive guide to setting up and running Google Test with CMake for C++ projects, ensuring a reliable and maintainable codebase.
-
-### 4. Test Program
-
-
-​	The test program is to prove that the main program is greatly complete the simulation and make sure the logic and data is correct, including three parts:
-
-(0.1) Check that the type of the model parameters (F , k) matches that of the element type of the u and v vectors.
-
-(0.2) Check that the variables u and v are the same size.
-
-(0.3) Check that the simulation produces the mathematically correct answer when u = 0 and v = 0.
