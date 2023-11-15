@@ -10,7 +10,7 @@ on:
       - 'main'
 
 jobs:
-  build_and_test_on_macos_and_ubuntu:
+  build_and_test:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -43,4 +43,4 @@ jobs:
       if: runner.os == 'Windows'
       run: |
         cd build
-        GrayScottTests
+        GrayScottTests.exe
