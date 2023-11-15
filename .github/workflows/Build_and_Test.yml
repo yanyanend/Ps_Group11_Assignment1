@@ -42,15 +42,7 @@ jobs:
         cmake -S . -B build -G "MinGW Makefiles"
         cmake --build build
         
-    - name: Run Test for OS except Windows
-      if: runner.os != 'Windows'
-      run: |
-        cd build
-        ./GrayScottTests
-
-    # Consider differences on shell between different OS, opening the executable file needs different command
-    - name: Run Test for Windows
-      if: runner.os == 'Windows'
+    - name: Run Test
       run: |
         cd build
         ./GrayScottTests
