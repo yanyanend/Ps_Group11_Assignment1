@@ -37,7 +37,7 @@ jobs:
     - name: Build on Windows
       if: runner.os == 'Windows'
       run: |
-        cmake -S . -B build
+        cmake -S . -B build -G "MinGW Makefiles"
         cmake --build build
         
     - name: Run Test for OS except Windows
