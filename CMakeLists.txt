@@ -3,14 +3,15 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 cmake_minimum_required(VERSION 3.24)
 project(Ps_Group11_Assignment1)
 
+# GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
-
-enable_testing()
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 FetchContent_Declare(
         googletest
-        URL https://github.com/google/googletest/archive/release-1.10.0.zip
+        # Always pull the latest Google Test version
+        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
 )
 
 FetchContent_GetProperties(googletest)
@@ -18,6 +19,8 @@ if(NOT googletest_POPULATED)
     FetchContent_Populate(googletest)
     add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 endif()
+
+enable_testing()
 
 add_executable(GrayScottSim src/gs.cpp
         main.cpp
@@ -28,7 +31,10 @@ add_executable(GrayScottTests
         src/gs.cpp
 )
 
-target_link_libraries(GrayScottTests gtest_main)
+target_link_libraries(
+        GrayScottTests
+        GTest::gtest_main
+)
 
 include(GoogleTest)
 
