@@ -1,0 +1,39 @@
+# This workflow is to build and test our repository automatically
+name: AutoTest
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  buildAndTest:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
+      fail-fast: false
+      
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    
+    steps:
+    # Checkout repository
+    - uses: actions/checkout@v4
+
+    - name: Setup Cmake
+      uses: jwlawson/actions-setup-cmake@v1.13
+      
+    - name: Build
+      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+      run: |
+        cmake -S . -B build
+        cmake --build build
+
+    - name: Run Test
+      run: |
+        cd build
+        ctest
