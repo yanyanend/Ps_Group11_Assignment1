@@ -19,10 +19,8 @@ jobs:
       
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        include:
-          - os: windows-latest
-            c_compiler: cl
-            cpp_compiler: cl
+        build_type: [Release]
+        c_compiler: [gcc, clang]
     steps:
     # Checkout repository
     - uses: actions/checkout@v4
@@ -39,4 +37,4 @@ jobs:
     - name: Run Test
       run: |
         cd build
-        ctest
+        ./GrayScottTests
