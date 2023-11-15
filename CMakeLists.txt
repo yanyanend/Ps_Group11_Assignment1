@@ -6,7 +6,6 @@ project(Ps_Group11_Assignment1)
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 include(FetchContent)
 FetchContent_Declare(
@@ -31,14 +30,8 @@ add_executable(GrayScottTests
 )
 
 target_link_libraries(
-        GrayScottSim
-        pthread
-)
-
-target_link_libraries(
         GrayScottTests
         GTest::gtest_main
-        pthread
 )
 
 include(GoogleTest)
