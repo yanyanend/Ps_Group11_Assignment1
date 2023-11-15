@@ -43,4 +43,5 @@ jobs:
       if: runner.os == 'Windows'
       run: |
         cd build
-        GrayScottTests.exe
+        dir
+        ctest
