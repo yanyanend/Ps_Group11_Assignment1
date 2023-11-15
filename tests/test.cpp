@@ -67,7 +67,7 @@ TEST(GrayScott_GoogleTest, uv_both_zero) {
     for (int x = 0; x < width; ++x) {
         for (int y = 0; y < height; ++y) {
             EXPECT_EQ(u[x][y], 0.0);
-            EXPECT_EQ(u[x][y], 0.0);
+            EXPECT_EQ(v[x][y], 0.0);
         }
     }
     std::cout << "Finished." << std::endl;
