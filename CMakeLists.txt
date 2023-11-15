@@ -20,10 +20,6 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(GrayScottSim src/gs.cpp
-        main.cpp
-)
-
 add_executable(GrayScottTests
         tests/test.cpp
         src/gs.cpp
