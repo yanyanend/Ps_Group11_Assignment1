@@ -16,10 +16,10 @@
 - **Progress**: Writing test codes and developing the CI part.
 - **Challenges**:
   - Huang Nannan encountered discrepancies between the code and expected behaviors during test writing.
-  - Yan Yan faced environmental dependency issues in configuring CI.
+  - HaoYu Liu faced environmental dependency issues in configuring CI.
 - **Solutions**:
   - Huang Nannan communicated with the original code developers to adjust the testing logic.
-  - Yan Yan resolved the dependency issues by consulting documentation and community discussions.
+  - HaoYu Liu resolved the dependency issues by consulting documentation and community discussions.
 
 ## November 9th - November 11th
 - **Progress**: Debugging test codes, testing CI scripts, and beginning the documentation.
