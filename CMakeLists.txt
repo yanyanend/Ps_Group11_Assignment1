@@ -31,8 +31,14 @@ add_executable(GrayScottTests
 )
 
 target_link_libraries(
+        GrayScottSim
+        pthread
+)
+
+target_link_libraries(
         GrayScottTests
         GTest::gtest_main
+        pthread
 )
 
 include(GoogleTest)
