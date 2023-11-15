@@ -10,7 +10,6 @@ TEST(GrayScott_GoogleTest, parametertype_check) {
      *  Test 1：
      *  Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors.
      */
-
     std::cout << "Test 1 Running..." << std::endl;
 
     // Check that the type of (F, k)
