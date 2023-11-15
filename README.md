@@ -23,7 +23,7 @@
 
 ### 3. Google Test Setup with CMake
 
-This guide provides instructions on setting up a Google Test environment for C++ projects using CMake on Linux.
+This guide provides instructions on setting up a [Google Test](https://github.com/google/googletest) environment for C++ projects using [CMake](https://cmake.org/) on Linux.
 
 ## Overview
 
