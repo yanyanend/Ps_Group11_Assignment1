@@ -19,7 +19,10 @@ jobs:
       
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-    
+        include:
+          - os: windows-latest
+            c_compiler: cl
+            cpp_compiler: cl
     steps:
     # Checkout repository
     - uses: actions/checkout@v4
