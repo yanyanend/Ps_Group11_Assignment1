@@ -1,5 +1,13 @@
 # Ps_Group11_Assignment
 
+## Overview
+
+We have chosen Google Test for testing in our project. Google Test is a popular C++ testing framework designed for a rich testing experience. It supports various types of assertions, test fixtures, and provides mechanisms for organizing and filtering test cases. Google Test simplifies writing test cases through macros, making test code easier to write and maintain.
+
+CMake is a cross-platform build system that uses CMakeLists.txt files to define the build process of a project. It generates standard build files like Makefile or Visual Studio project files, which are then used to compile and link the program. The advantage of CMake lies in its cross-platform capabilities and flexibility, allowing it to handle complex build environments.
+
+## What's in this project?
+
 ### 1. Project Introduction & Application
 
 #### 1.1 Model Introduction
@@ -23,7 +31,7 @@
 
 ### 3. Google Test Setup with CMake
 
-This guide provides instructions on setting up the Google Test environment for C++ projects using [CMake](https://cmake.org/).
+This project uses Google Test to run unit tests of main program. This readme file also provides instructions on setting up the Google Test environment for C++ projects using [CMake](https://cmake.org/).
 
 
 ### 4. Test Program
@@ -41,13 +49,7 @@ This guide provides instructions on setting up the Google Test environment for C
 This project employs GitHub Actions for continuous integration, establishing an automated build and test workflow. This workflow automatically check if any impact of push or pull-request actions on the program.
 
 
-## Overview
-
-We have chosen Google Test for testing in our project. Google Test is a popular C++ testing framework designed for a rich testing experience. It supports various types of assertions, test fixtures, and provides mechanisms for organizing and filtering test cases. Google Test simplifies writing test cases through macros, making test code easier to write and maintain.
-
-CMake is a cross-platform build system that uses CMakeLists.txt files to define the build process of a project. It generates standard build files like Makefile or Visual Studio project files, which are then used to compile and link the program. The advantage of CMake lies in its cross-platform capabilities and flexibility, allowing it to handle complex build environments.
-
-## Steps for Setup
+## Setup Instruction
 
 ### Step 1: Install CMake and Related Tools
 
